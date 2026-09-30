@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChicSac — Timeless Elegance | Signature Leather Tote ($40)</title>
+  <meta name="description" content="Discover timeless elegance with the ChicSac Signature Leather Tote for only $40. Handcrafted genuine leather, fast worldwide shipping, and premium luxury in every detail.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c69956'><path d='M16 11V7a4 4 0 0 0-8 0v4M5 9h14l1 12H4L5 9z'/></svg>">
+</head>
+<body>
+
+  <!-- ==========================================
+       ULTRA-LUXURIOUS TOP NAVIGATION BAR
+       ========================================== -->
+  <header class="luxury-top-navbar" id="luxury-top-navbar">
+    <div class="navbar-inner-container">
+      
+      <!-- Left: Mobile Toggle & Brand Logo -->
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <button type="button" class="nav-hamburger-btn" id="mobile-hamburger-btn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <a href="index.html" class="nav-brand-wrap" aria-label="ChicSac - Home">
+          <svg class="nav-brand-logo-svg" viewBox="0 0 40 40">
+            <path d="M12 16 L8 34 C8 35.5 9 36.5 10.5 36.5 L29.5 36.5 C31 36.5 32 35.5 32 34 L28 16 Z" stroke-width="2" stroke-linejoin="round" />
+            <path d="M15 16 C15 7, 25 7, 25 16" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <div class="nav-brand-text">
+            <span class="nav-brand-title">ChicSac</span>
+            <span class="nav-brand-subtitle">TIMELESS ELEGANCE</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Center: Main Navigation Links (Icon Tabs) -->
+      <nav class="nav-menu-desktop" aria-label="Main Navigation">
+        <a href="index.html" class="nav-tab-icon-item active" title="Home" aria-label="Home">
+          <svg class="tab-icon-svg" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span class="tab-icon-label">HOME</span>
+        </a>
+        <a href="#product-showcase" class="nav-tab-icon-item" title="Collection" aria-label="Collection">
+          <svg class="tab-icon-svg" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect></svg>
+          <span class="tab-icon-label">COLLECTION</span>
+        </a>
+        <a href="contact.html" class="nav-tab-icon-item" title="Contact Us" aria-label="Contact Us">
+          <svg class="tab-icon-svg" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          <span class="tab-icon-label">CONTACT US</span>
+        </a>
+      </nav>
+
+      <!-- Right: Utility Actions (All fully functioning) -->
+      <div class="nav-actions-group">
+        
+        <!-- Currency Selector Dropdown -->
+        <div class="currency-selector-wrap" id="currency-selector-container">
+          <button type="button" class="currency-toggle-btn" id="currency-toggle-btn" aria-label="Select Currency">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <span id="active-currency-text">USD ($)</span>
+            <svg viewBox="0 0 24 24" style="width: 10px; height: 10px; stroke-width: 2.5;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="currency-dropdown-menu" id="currency-dropdown-menu">
+            <button type="button" class="currency-option-item active" data-curr="USD" data-symbol="$" data-rate="1">
+              <span>USD ($)</span>
+              <span>$40.00</span>
+            </button>
+            <button type="button" class="currency-option-item" data-curr="EUR" data-symbol="€" data-rate="0.95">
+              <span>EUR (€)</span>
+              <span>€38.00</span>
+            </button>
+            <button type="button" class="currency-option-item" data-curr="GBP" data-symbol="£" data-rate="0.80">
+              <span>GBP (£)</span>
+              <span>£32.00</span>
+            </button>
+            <button type="button" class="currency-option-item" data-curr="AED" data-symbol="AED " data-rate="3.67">
+              <span>AED (د.إ)</span>
+              <span>150 AED</span>
+            </button>
+            <button type="button" class="currency-option-item" data-curr="SAR" data-symbol="SAR " data-rate="3.75">
+              <span>SAR (ر.س)</span>
+              <span>150 SAR</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Search Button -->
+        <button type="button" class="nav-icon-btn" id="nav-search-btn" aria-label="Search Collection" title="Search Collection">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+
+        <!-- VIP Member / Account Button -->
+        <button type="button" class="nav-icon-btn" id="nav-account-btn" aria-label="VIP Member Portal" title="VIP Member Portal">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </button>
+
+        <!-- Shopping Cart Button with Dynamic Badge -->
+        <button type="button" class="nav-icon-btn" id="nav-cart-btn" aria-label="Open Shopping Bag" title="Shopping Bag">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="nav-cart-badge" id="top-cart-badge">1</span>
+        </button>
+
+        <!-- Direct ORDER NOW CTA -->
+        <button type="button" class="nav-cta-pill-btn" id="nav-order-cta-btn">
+          <span>ORDER NOW &bull; <span class="nav-price-display">$40</span></span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO & HEADER BANNER
+       ========================================== -->
+  <section class="hero-top-wrapper" id="hero-section">
+    <!-- High-res Exact Reference Hero Display with Hotspots -->
+    <div class="hero-banner-frame">
+      <img src="assets/images/hero-banner.png?v=2" alt="ChicSac - More Than a Bag, It's a Lifestyle" class="hero-exact-img" id="hero-main-img">
+
+      <!-- Interactive Hotspots Overlay -->
+      <div class="hero-hotspots-container">
+        
+        <!-- Top Bar Hotspots -->
+        <a href="index.html" class="hotspot hotspot-logo" aria-label="ChicSac Home"></a>
+        <button type="button" class="hotspot hotspot-search" id="btn-search-trigger" aria-label="Search Collection"></button>
+        <button type="button" class="hotspot hotspot-account" id="btn-account-trigger" aria-label="User Account"></button>
+        <button type="button" class="hotspot hotspot-cart" id="btn-cart-trigger" aria-label="Open Shopping Cart">
+          <span class="live-cart-badge" id="live-cart-counter">0</span>
+        </button>
+        <button type="button" class="hotspot hotspot-lang" id="lang-selector" aria-label="Language Selector"></button>
+
+        <!-- Main CTA Button: Glowing Luxury Neon SHOP NOW Button -->
+        <a href="#product-showcase" class="hero-neon-cta-btn" id="hero-shop-btn" aria-label="Shop Signature Leather Tote for $40">
+          <svg class="neon-btn-icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span>SHOP NOW</span>
+          <svg class="neon-btn-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+
+        <!-- Carousel Nav Hotspots -->
+        <button type="button" class="hotspot hotspot-prev" id="hero-prev" aria-label="Previous Hero Slide"></button>
+        <button type="button" class="hotspot hotspot-next" id="hero-next" aria-label="Next Hero Slide"></button>
+
+      </div>
+    </div>
+
+    <!-- Responsive Fallback for Mobile / Tablet (< 900px) -->
+    <div class="hero-mobile-block">
+      <!-- Mobile Top Bar -->
+      <div class="mobile-top-bar">
+        <div class="brand-logo-wrap">
+          <svg class="logo-icon-svg" viewBox="0 0 40 40">
+            <path d="M12 16 L8 34 C8 35.5 9 36.5 10.5 36.5 L29.5 36.5 C31 36.5 32 35.5 32 34 L28 16 Z" stroke-width="2" stroke-linejoin="round" />
+            <path d="M15 16 C15 7, 25 7, 25 16" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <div class="brand-text-group">
+            <span class="brand-name">ChicSac</span>
+            <span class="brand-tagline">TIMELESS ELEGANCE</span>
+          </div>
+        </div>
+        <button class="mobile-cart-btn" id="mobile-cart-trigger" aria-label="Cart">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="mobile-cart-badge" id="mobile-cart-badge">0</span>
+        </button>
+      </div>
+
+      <div class="mobile-hero-content">
+        <span class="hero-badge-tag">PREMIUM LEATHER BAGS</span>
+        <h1 class="hero-main-title">More Than a Bag<br>It's a <span>Lifestyle</span></h1>
+        <p class="hero-description">Discover timeless elegance with our handcrafted leather totes. Designed for women who value style, quality and everyday comfort.</p>
+        <a href="#product-showcase" class="hero-cta-btn">
+          <span>SHOP NOW</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION: CHOOSE YOUR PERFECT SET
+       ========================================== -->
+  <section class="product-section" id="product-showcase">
+    
+    <!-- 8 Trust Icons Showcase (Both Sets) Above Choose Your Perfect Set -->
+    <div class="trust-bar-horizontal">
+      <div class="trust-bar-grid">
+        <!-- ROW 1: 4 Horizontal Strip Icons -->
+        <!-- Item 1: Genuine Leather -->
+        <div class="trust-col-item">
+          <div class="trust-col-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2L15 5H19V9L22 12L19 15V19H15L12 22L9 19H5V15L2 12L5 9V5H9L12 2Z"/>
+            </svg>
+          </div>
+          <div class="trust-col-content">
+            <span class="trust-col-title">Genuine Leather</span>
+            <span class="trust-col-desc">100% authentic &amp; durable</span>
+          </div>
+        </div>
+
+        <!-- Item 2: Timeless Design -->
+        <div class="trust-col-item">
+          <div class="trust-col-icon">
+            <svg viewBox="0 0 24 24">
+              <polygon points="6 3 18 3 22 9 12 22 2 9 6 3"/>
+              <line x1="2" y1="9" x2="22" y2="9"/>
+              <polyline points="12 22 8 9 12 3 16 9 12 22"/>
+            </svg>
+          </div>
+          <div class="trust-col-content">
+            <span class="trust-col-title">Timeless Design</span>
+            <span class="trust-col-desc">Classic style, forever</span>
+          </div>
+        </div>
+
+        <!-- Item 3: Secure Payment -->
+        <div class="trust-col-item">
+          <div class="trust-col-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="M9 12l2 2 4-4"/>
+            </svg>
+          </div>
+          <div class="trust-col-content">
+            <span class="trust-col-title">Secure Payment</span>
+            <span class="trust-col-desc">Shop with confidence</span>
+          </div>
+        </div>
+
+        <!-- Item 4: Worldwide Shipping -->
+        <div class="trust-col-item">
+          <div class="trust-col-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <div class="trust-col-content">
+            <span class="trust-col-title">Worldwide Shipping</span>
+            <span class="trust-col-desc">Fast &amp; reliable delivery</span>
+          </div>
+        </div>
+
+        <!-- Divider line between Row 1 and Row 2 -->
+        <div class="trust-bar-row-divider"></div>
+
+        <!-- ROW 2: 4 Square Reference Icons -->
+        <!-- Item 5: Premium Quality -->
+        <div class="trust-col-item">
+          <div class="trust-col-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="M12 8l1.5 3 3 1.5-3 1.5-1.5 3-1.5-3-3-1.5 3-1.5z"/>
+            </svg>
+          </div>
+          <div class="trust-col-content">
+            <span class="trust-col-title">Premium Quality</span>
+            <span class="trust-col-desc">Crafted with genuine leather</span>
+          </div>
+        </div>
+
+        <!-- Item 6: Free Global Shipping -->
+        <div class="trust-col-item">
+          <div class="trust-col-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="1" y="3" width="15" height="13" rx="1"/>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          <div class="trust-col-content">
+            <span class="trust-col-title">Free Global Shipping</span>
+            <span class="trust-col-desc">Fast &amp; reliable delivery</span>
+          </div>
+        </div>
+
+        <!-- Item 7: Secure Checkout -->
+        <div class="trust-col-item">
+          <div class="trust-col-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <rect x="9" y="11" width="6" height="5" rx="1"/>
+              <path d="M10 11V9a2 2 0 0 1 4 0v2"/>
+            </svg>
+          </div>
+          <div class="trust-col-content">
+            <span class="trust-col-title">Secure Checkout</span>
+            <span class="trust-col-desc">100% protected payments</span>
+          </div>
+        </div>
+
+        <!-- Item 8: Easy Returns -->
+        <div class="trust-col-item">
+          <div class="trust-col-icon">
+            <svg viewBox="0 0 24 24">
+              <polyline points="23 4 23 10 17 10"/>
+              <polyline points="1 20 1 14 7 14"/>
+              <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+            </svg>
+          </div>
+          <div class="trust-col-content">
+            <span class="trust-col-title">Easy Returns</span>
+            <span class="trust-col-desc">Hassle-free within 7 days</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Botanical Olive Branches Framing the Section -->
+    <img src="assets/images/leaves-left.png" alt="" class="botanical-decor botanical-left" aria-hidden="true">
+    <img src="assets/images/leaves-right.png" alt="" class="botanical-decor botanical-right" aria-hidden="true">
+
+    <div class="section-container">
+      
+      <!-- Section Header -->
+      <div class="section-header-wrap">
+        <div class="section-title-line-group">
+          <div class="gold-dec-line left"></div>
+          <h2 class="section-title">Choose Your Perfect Set</h2>
+          <div class="gold-dec-line right"></div>
+        </div>
+        <p class="section-subtitle-tag">STYLE • FUNCTIONALITY • TIMELESS ELEGANCE</p>
+      </div>
+
+      <!-- Main Showcase Container Box -->
+      <div class="showcase-box" id="product-order">
+        
+        <!-- ==============================================
+             COLUMN 1: PRODUCT GALLERY
+             ============================================== -->
+        <div class="gallery-column">
+          <!-- Vertical Thumbnail Column (5 items) -->
+          <div class="thumbnail-strip" id="thumbnail-strip">
+            <div class="thumb-item active" data-img="assets/images/bag-front.jpg" data-index="0" title="Cognac Tan - Front View">
+              <img src="assets/images/bag-front.jpg" alt="Front view of ChicSac Leather Tote">
+            </div>
+            <div class="thumb-item" data-img="assets/images/bag-side.jpg" data-index="1" title="Side Profile">
+              <img src="assets/images/bag-side.jpg" alt="Side profile of ChicSac Leather Tote">
+            </div>
+            <div class="thumb-item" data-img="assets/images/bag-colors.jpg" data-index="2" title="Both Color Options">
+              <img src="assets/images/bag-colors.jpg" alt="Vintage Brown &amp; Cognac Tan bags">
+            </div>
+            <div class="thumb-item" data-img="assets/images/bag-stitch-detail.jpg" data-index="3" title="Stitching Detail">
+              <img src="assets/images/bag-stitch-detail.jpg" alt="Reinforced hand stitching detail">
+            </div>
+            <div class="thumb-item" data-img="assets/images/bag-interior-pocket.jpg" data-index="4" title="Interior Zipper Pocket">
+              <img src="assets/images/bag-interior-pocket.jpg" alt="Interior compartment and zipper pocket">
+            </div>
+          </div>
+
+          <!-- Main Product Display -->
+          <div class="main-img-display-frame">
+            <div class="best-seller-badge">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+              </svg>
+              <span>BEST SELLER</span>
+            </div>
+
+            <!-- Interactive Zoom / Lightbox Trigger -->
+            <img src="assets/images/bag-front.jpg" alt="ChicSac Signature Leather Tote" class="main-product-img" id="main-product-image">
+
+            <!-- Nav Arrows -->
+            <button class="gallery-arrow-btn prev" id="gallery-prev" aria-label="Previous Photo">
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="gallery-arrow-btn next" id="gallery-next" aria-label="Next Photo">
+              <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+
+            <!-- Dots Indicator -->
+            <div class="gallery-dots-bar" id="gallery-dots">
+              <span class="gallery-dot active" data-index="0"></span>
+              <span class="gallery-dot" data-index="1"></span>
+              <span class="gallery-dot" data-index="2"></span>
+              <span class="gallery-dot" data-index="3"></span>
+              <span class="gallery-dot" data-index="4"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==============================================
+             COLUMN 2: PRODUCT DETAILS & FEATURES
+             ============================================== -->
+        <div class="details-column">
+          <h1 class="product-title">ChicSac Signature Leather Tote</h1>
+          <p class="product-subtitle">Timeless design. Everyday elegance.</p>
+          
+          <p class="product-desc">
+            Crafted from premium <strong>genuine leather</strong>, this versatile tote combines style, functionality and durability. Perfect for work, travel or everyday use — a <strong>must-have</strong> for the modern woman.
+          </p>
+
+          <!-- Price Row -->
+          <div class="price-row-box">
+            <span class="price-main" id="display-price">$40</span>
+            <span class="price-original">$89</span>
+            <span class="discount-pill">55% OFF</span>
+          </div>
+
+          <!-- Order CTA Button -->
+          <button class="order-btn-primary" id="open-order-modal-btn">
+            <svg viewBox="0 0 24 24">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span>ORDER NOW</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" style="width: 14px; margin-left: 2px;">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+
+          <div class="order-reassurance-row">
+            <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>In Stock &bull; 100% Genuine Handcrafted Leather &bull; Free Global Shipping</span>
+          </div>
+        </div>
+
+        <!-- ==============================================
+             BOTTOM STRIP: 6 DETAILED VIEWS (RIGHT TO LEFT)
+             ============================================== -->
+        <div class="detailed-views-bottom-strip" id="detailed-views-strip">
+          <div class="detailed-views-header">
+            <div class="views-title-group">
+              <span class="views-eyebrow">360° CRAFTSMANSHIP &amp; DETAILS</span>
+              <h3 class="views-heading">Detailed Views &bull; مناظر تفصيلية للمنتج</h3>
+            </div>
+            <div class="views-instruction">
+              <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              <span>Click any image to view in HD / انقر لعرض الصورة بدقة عالية</span>
+            </div>
+          </div>
+
+          <div class="detailed-views-grid" id="detailed-views-grid" dir="rtl">
+            
+            <!-- View 1: Front View (Rightmost in RTL) -->
+            <div class="detail-view-card" data-img="assets/images/bag-front.jpg" data-title="Front View">
+              <div class="detail-view-img-box">
+                <img src="assets/images/bag-front.jpg" alt="ChicSac Front View" loading="lazy">
+                <div class="detail-view-badge">Front</div>
+                <div class="detail-hover-action">
+                  <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                </div>
+              </div>
+              <span class="detail-view-caption">الواجهة الأمامية<br><span style="font-size: 10px; color: var(--text-muted);">Front Profile</span></span>
+            </div>
+
+            <!-- View 2: Side Profile -->
+            <div class="detail-view-card" data-img="assets/images/bag-side.jpg" data-title="Side Profile">
+              <div class="detail-view-img-box">
+                <img src="assets/images/bag-side.jpg" alt="ChicSac Side Profile" loading="lazy">
+                <div class="detail-view-badge">Side</div>
+                <div class="detail-hover-action">
+                  <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                </div>
+              </div>
+              <span class="detail-view-caption">المظهر الجانبي<br><span style="font-size: 10px; color: var(--text-muted);">Side Silhouette</span></span>
+            </div>
+
+            <!-- View 3: Reinforced Stitching -->
+            <div class="detail-view-card" data-img="assets/images/bag-stitch-detail.jpg" data-title="Stitching Detail">
+              <div class="detail-view-img-box">
+                <img src="assets/images/bag-stitch-detail.jpg" alt="Reinforced Stitching Detail" loading="lazy">
+                <div class="detail-view-badge">Stitch</div>
+                <div class="detail-hover-action">
+                  <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                </div>
+              </div>
+              <span class="detail-view-caption">خياطة يدوية معززة<br><span style="font-size: 10px; color: var(--text-muted);">Artisan Stitching</span></span>
+            </div>
+
+            <!-- View 4: Interior Zipper Pocket -->
+            <div class="detail-view-card" data-img="assets/images/bag-interior-pocket.jpg" data-title="Interior Pocket">
+              <div class="detail-view-img-box">
+                <img src="assets/images/bag-interior-pocket.jpg" alt="Interior Zipper Pocket" loading="lazy">
+                <div class="detail-view-badge">Pocket</div>
+                <div class="detail-hover-action">
+                  <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                </div>
+              </div>
+              <span class="detail-view-caption">جيب داخلي بسحاب<br><span style="font-size: 10px; color: var(--text-muted);">Zipper Pocket</span></span>
+            </div>
+
+            <!-- View 5: Solid Structured Bottom -->
+            <div class="detail-view-card" data-img="assets/images/bag-bottom.jpg" data-title="Structured Bottom">
+              <div class="detail-view-img-box">
+                <img src="assets/images/bag-bottom.jpg" alt="ChicSac Structured Bottom Base" loading="lazy">
+                <div class="detail-view-badge">Base</div>
+                <div class="detail-hover-action">
+                  <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                </div>
+              </div>
+              <span class="detail-view-caption">قاعدة متينة ومستقرة<br><span style="font-size: 10px; color: var(--text-muted);">Structured Base</span></span>
+            </div>
+
+            <!-- View 6: Lifestyle on Model (Leftmost in RTL) -->
+            <div class="detail-view-card" data-img="assets/images/bag-model-stairs.jpg" data-title="Lifestyle Look">
+              <div class="detail-view-img-box">
+                <img src="assets/images/bag-model-stairs.jpg" alt="Model wearing ChicSac" loading="lazy">
+                <div class="detail-view-badge">Lifestyle</div>
+                <div class="detail-hover-action">
+                  <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                </div>
+              </div>
+              <span class="detail-view-caption">إطلالة عصرية فاخرة<br><span style="font-size: 10px; color: var(--text-muted);">Lifestyle Model</span></span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SITE FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="footer-top-container">
+      
+      <!-- Logo in Footer -->
+      <div class="brand-logo-wrap">
+        <svg class="logo-icon-svg" viewBox="0 0 40 40">
+          <path d="M12 16 L8 34 C8 35.5 9 36.5 10.5 36.5 L29.5 36.5 C31 36.5 32 35.5 32 34 L28 16 Z" stroke-width="2" stroke-linejoin="round" />
+          <path d="M15 16 C15 7, 25 7, 25 16" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <div class="brand-text-group">
+          <span class="brand-name">ChicSac</span>
+          <span class="brand-tagline">TIMELESS ELEGANCE</span>
+        </div>
+      </div>
+
+      <!-- Center Links -->
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <a href="#product-showcase" class="footer-link">Shop</a>
+        <a href="#hero-section" class="footer-link">About</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+      </nav>
+
+      <!-- Newsletter Signup -->
+      <div class="footer-newsletter-wrap">
+        <div class="newsletter-info">
+          <div class="newsletter-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </div>
+          <div class="newsletter-text">
+            <span class="newsletter-title">Join Our Newsletter</span>
+            <span class="newsletter-sub">Get exclusive offers &amp; style updates.</span>
+          </div>
+        </div>
+        <form class="newsletter-form" id="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="Your email address" class="newsletter-input" required id="newsletter-email">
+          <button type="submit" class="newsletter-submit-btn" aria-label="Subscribe to newsletter">
+            <svg viewBox="0 0 24 24" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="footer-social-links">
+        <a href="#" class="social-icon-btn" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"></line></svg>
+        </a>
+        <a href="#" class="social-icon-btn" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a href="#" class="social-icon-btn" aria-label="Pinterest">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.4 9.3-.09-.78-.17-1.98.04-2.83.19-.77 1.25-5.32 1.25-5.32s-.32-.64-.32-1.58c0-1.48.86-2.59 1.93-2.59.91 0 1.35.68 1.35 1.5 0 .91-.58 2.28-.88 3.55-.25 1.06.53 1.92 1.57 1.92 1.89 0 3.34-1.99 3.34-4.87 0-2.54-1.83-4.32-4.44-4.32-3.03 0-4.8 2.27-4.8 4.62 0 .91.35 1.89.79 2.42.09.11.1.2.07.31-.08.31-.25 1.02-.28 1.16-.04.19-.15.23-.34.14-1.27-.59-2.07-2.45-2.07-3.94 0-3.21 2.33-6.16 6.73-6.16 3.53 0 6.28 2.52 6.28 5.88 0 3.51-2.21 6.33-5.28 6.33-1.03 0-2-.54-2.33-1.17l-.64 2.43c-.23.89-.86 2-1.28 2.69.96.3 1.98.46 3.03.46 5.52 0 10-4.48 10-10S17.52 2 12 2z"></path></svg>
+        </a>
+        <a href="#" class="social-icon-btn" aria-label="YouTube">
+          <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" fill="none" stroke="currentColor" stroke-width="2"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon></svg>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="footer-bottom-container">
+      <span>&copy; 2025 ChicSac. All rights reserved.</span>
+      <span class="footer-luxury-tag">Luxury in Every Detail</span>
+      <span class="footer-dev-credit">Développé par <a href="https://wa.me/212642394756" target="_blank" rel="noopener noreferrer">Ecom Boost Pro</a></span>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       ORDER MODAL / FAST CHECKOUT
+       ========================================== -->
+  <div class="modal-overlay" id="order-modal-overlay">
+    <div class="order-modal-window">
+      <button class="modal-close-btn" id="close-order-modal-btn" aria-label="Close Order Modal">&times;</button>
+      
+      <!-- Order Form View -->
+      <div id="order-form-container">
+        <div class="modal-header-block">
+          <h3 class="modal-title">Complete Your Order</h3>
+          <p class="modal-subtitle">Special Introductory Price: $40 with Free Worldwide Delivery</p>
+        </div>
+
+        <!-- Product Preview Box -->
+        <div class="modal-product-summary">
+          <img src="assets/images/bag-front.jpg" alt="Selected Bag" class="modal-product-thumb" id="modal-bag-thumb">
+          <div class="modal-product-meta">
+            <div class="modal-meta-title">ChicSac Signature Leather Tote</div>
+            <div class="modal-meta-price">$40 <span style="font-size: 12px; color: #8c7c6c; text-decoration: line-through;">$89</span></div>
+            <div style="font-size: 11.5px; color: #2e7d32; font-weight: 600; margin-top: 2px;">In Stock &amp; Ready to Ship</div>
+          </div>
+        </div>
+
+        <form id="order-form">
+          <!-- Color Selection -->
+          <div class="order-form-group">
+            <label class="form-label">Select Color</label>
+            <div class="color-options-row">
+              <button type="button" class="color-option-btn selected" data-color="Cognac Tan" data-img="assets/images/bag-front.jpg">
+                <span class="color-swatch-circle tan"></span>
+                <span>Cognac Tan</span>
+              </button>
+              <button type="button" class="color-option-btn" data-color="Vintage Brown" data-img="assets/images/bag-colors.jpg">
+                <span class="color-swatch-circle brown"></span>
+                <span>Vintage Brown</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Quantity Selection -->
+          <div class="order-form-group">
+            <label class="form-label">Quantity</label>
+            <div class="quantity-picker-row">
+              <button type="button" class="qty-btn" id="qty-minus">&minus;</button>
+              <span class="qty-display" id="qty-value">1</span>
+              <button type="button" class="qty-btn" id="qty-plus">&plus;</button>
+            </div>
+          </div>
+
+          <!-- Recipient Name -->
+          <div class="order-form-group">
+            <label class="form-label" for="customer-name">Full Name</label>
+            <input type="text" id="customer-name" class="form-input-field" placeholder="e.g. Sarah Jenkins" required>
+          </div>
+
+          <!-- Recipient Phone / WhatsApp -->
+          <div class="order-form-group">
+            <label class="form-label" for="customer-phone">Phone / WhatsApp Number</label>
+            <input type="tel" id="customer-phone" class="form-input-field" placeholder="e.g. +1 (555) 234-5678" required>
+          </div>
+
+          <!-- Delivery Address -->
+          <div class="order-form-group">
+            <label class="form-label" for="customer-address">Delivery Address &amp; City</label>
+            <input type="text" id="customer-address" class="form-input-field" placeholder="Street, Apartment, City, Postal Code" required>
+          </div>
+
+          <!-- Payment Option -->
+          <div class="order-form-group">
+            <label class="form-label">Payment Method</label>
+            <select class="form-select-field" id="payment-method">
+              <option value="cod">Cash on Delivery (Pay when you receive)</option>
+              <option value="card">Credit / Debit Card (100% Encrypted)</option>
+              <option value="applepay">Apple Pay / Google Pay</option>
+            </select>
+          </div>
+
+          <!-- Order Summary Breakdown -->
+          <div class="order-cost-breakdown">
+            <div class="cost-row">
+              <span>Item Subtotal:</span>
+              <span id="summary-subtotal">$40.00</span>
+            </div>
+            <div class="cost-row">
+              <span>Worldwide Shipping:</span>
+              <span style="color: #2e7d32; font-weight: 600;">FREE</span>
+            </div>
+            <div class="cost-row total-row">
+              <span>Total Amount:</span>
+              <span id="summary-total" style="color: var(--primary-gold-dark);">$40.00</span>
+            </div>
+          </div>
+
+          <!-- Confirm Button -->
+          <button type="submit" class="submit-order-btn" id="submit-order-btn">
+            CONFIRM ORDER ($40.00)
+          </button>
+        </form>
+      </div>
+
+      <!-- Success Pane -->
+      <div class="order-success-pane" id="order-success-pane">
+        <div class="order-success-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5"></path></svg>
+        </div>
+        <h3 class="modal-title" style="color: #1e874b;">Order Confirmed!</h3>
+        <p style="font-size: 14px; color: #5c4e3f; margin: 8px 0 16px;">
+          Thank you for choosing ChicSac. Your Signature Leather Tote is being prepared with utmost care.
+        </p>
+        <div style="background: #f7f2ea; padding: 14px; border-radius: 8px; margin-bottom: 20px; font-size: 13px; text-align: left;">
+          <div><strong>Order Reference:</strong> <span id="success-order-id">#CS-98421</span></div>
+          <div><strong>Estimated Delivery:</strong> 3 &ndash; 5 Business Days</div>
+          <div><strong>Free Shipping:</strong> Included</div>
+        </div>
+        <button type="button" class="order-btn-primary" id="btn-done-order" style="width: 100%; max-width: none;">
+          CONTINUE BROWSING
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================
+       HD IMAGE LIGHTBOX MODAL
+       ========================================== -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <button class="lightbox-close-btn" id="close-lightbox-btn" aria-label="Close Preview">&times;</button>
+    <div class="lightbox-img-wrap">
+      <img src="assets/images/bag-front.jpg" alt="Enlarged ChicSac View" id="lightbox-img">
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div class="toast-msg" id="toast-msg">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#dfb775" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+    <span id="toast-text">Thank you! Your action was recorded.</span>
+  </div>
+
+  <!-- ==========================================
+       SEARCH OVERLAY MODAL
+       ========================================== -->
+  <div class="modal-luxury-backdrop" id="search-modal-backdrop">
+    <div class="search-modal-box" id="search-modal-box">
+      <button class="modal-close-btn" id="close-search-modal" aria-label="Close Search">&times;</button>
+      
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span class="views-eyebrow">CHICSAC CATALOG</span>
+      </div>
+      <h3 style="font-family: var(--font-serif); font-size: 24px; margin-top: 4px;">Search Our Collection</h3>
+      
+      <div class="search-input-wrapper">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" class="search-main-input" id="search-keyword-input" placeholder="Type a keyword (e.g. tote, brown, cognac, leather, $40)..." autocomplete="off">
+      </div>
+
+      <div class="search-tags-row">
+        <span class="search-tags-label">Quick Search:</span>
+        <button type="button" class="search-tag-chip" data-search="Signature Tote">Signature Tote</button>
+        <button type="button" class="search-tag-chip" data-search="Cognac Tan">Cognac Tan</button>
+        <button type="button" class="search-tag-chip" data-search="Vintage Brown">Vintage Brown</button>
+        <button type="button" class="search-tag-chip" data-search="Genuine Leather">Genuine Leather</button>
+      </div>
+
+      <div class="search-results-list" id="search-results-list">
+        <!-- Result 1 -->
+        <div class="search-result-item" data-target="product-showcase" data-color="Cognac Tan" data-img="assets/images/bag-front.jpg">
+          <img src="assets/images/bag-front.jpg" alt="Cognac Tan Tote" class="search-item-thumb">
+          <div class="search-item-info">
+            <div class="search-item-title">ChicSac Signature Leather Tote — Cognac Tan</div>
+            <div class="search-item-desc">Handcrafted genuine leather • Everyday luxury tote</div>
+          </div>
+          <div class="search-item-price">$40</div>
+        </div>
+
+        <!-- Result 2 -->
+        <div class="search-result-item" data-target="product-showcase" data-color="Vintage Brown" data-img="assets/images/bag-colors.jpg">
+          <img src="assets/images/bag-colors.jpg" alt="Vintage Brown Tote" class="search-item-thumb">
+          <div class="search-item-info">
+            <div class="search-item-title">ChicSac Signature Leather Tote — Vintage Brown</div>
+            <div class="search-item-desc">Deep rich patina leather • Zipper compartment</div>
+          </div>
+          <div class="search-item-price">$40</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       VIP MEMBER & ORDER TRACKING MODAL
+       ========================================== -->
+  <div class="modal-luxury-backdrop" id="account-modal-backdrop">
+    <div class="account-modal-card">
+      <button class="modal-close-btn" id="close-account-modal" aria-label="Close VIP Portal">&times;</button>
+      
+      <div class="account-header-center">
+        <div class="account-vip-crest">
+          <svg viewBox="0 0 24 24"><path d="M12 2L15 8H21L16.5 12L18.5 18L12 14L5.5 18L7.5 12L3 8H9L12 2Z"></path></svg>
+        </div>
+        <h3 style="font-family: var(--font-serif); font-size: 24px; margin-bottom: 2px;">ChicSac VIP Concierge</h3>
+        <p style="font-size: 12px; color: var(--text-muted);">Priority assistance, VIP discounts &amp; order tracking</p>
+      </div>
+
+      <div class="account-tabs-row">
+        <button type="button" class="account-tab-btn active" id="tab-vip-signin">VIP Member Sign In</button>
+        <button type="button" class="account-tab-btn" id="tab-order-track">Track Order</button>
+      </div>
+
+      <!-- Tab Content: VIP Sign In -->
+      <div id="pane-vip-signin">
+        <div class="vip-perk-pill">
+          <span class="vip-perk-badge">VIP REWARD</span>
+          <span>Use code <strong>CHIC10</strong> for extra 10% off &amp; free worldwide delivery!</span>
+        </div>
+        <form id="vip-auth-form" onsubmit="return false;">
+          <div class="order-form-group">
+            <label class="form-label" for="vip-user-email">VIP Member Email</label>
+            <input type="email" id="vip-user-email" class="form-input-field" placeholder="your-email@example.com" required>
+          </div>
+          <div class="order-form-group">
+            <label class="form-label" for="vip-user-password">Password / Secret PIN</label>
+            <input type="password" id="vip-user-password" class="form-input-field" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="order-btn-primary" style="width: 100%; max-width: none;" id="btn-vip-login-submit">
+            ENTER VIP CONCIERGE
+          </button>
+        </form>
+      </div>
+
+      <!-- Tab Content: Track Order -->
+      <div id="pane-order-track" style="display: none;">
+        <form id="track-shipment-form" onsubmit="return false;">
+          <div class="order-form-group">
+            <label class="form-label" for="track-shipment-id">Order Reference #</label>
+            <input type="text" id="track-shipment-id" class="form-input-field" placeholder="e.g. #CS-98421" required>
+          </div>
+          <button type="submit" class="order-btn-primary" style="width: 100%; max-width: none;" id="btn-track-submit">
+            TRACK SHIPMENT
+          </button>
+        </form>
+        <div id="tracking-result-box" style="display: none; margin-top: 16px; background: rgba(255,255,255,0.06); padding: 14px; border-radius: 8px; border: 1px solid rgba(223,183,117,0.3); font-size: 12.5px;">
+          <div style="color: #4ade80; font-weight: 700; margin-bottom: 4px;">● In Transit — On Schedule</div>
+          <div style="color: #eae1d5;">Carrier: DHL Worldwide Express</div>
+          <div style="color: var(--text-muted); font-size: 11.5px; margin-top: 4px;">Estimated Arrival: 3 Business Days</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       CART SLIDE-OUT DRAWER
+       ========================================== -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay">
+    <div class="cart-drawer-backdrop" id="cart-drawer-backdrop"></div>
+    <div class="cart-drawer-panel">
+      <div class="cart-drawer-header">
+        <div class="cart-header-title-wrap">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <h3>Shopping Bag (<span id="drawer-items-count">1</span>)</h3>
+        </div>
+        <button type="button" class="cart-drawer-close" id="close-cart-drawer-btn" aria-label="Close Cart">&times;</button>
+      </div>
+
+      <!-- Free Worldwide Shipping Progress -->
+      <div class="cart-free-shipping-bar">
+        <div class="free-shipping-text">
+          <span>Worldwide Express Delivery: <strong>FREE</strong></span>
+          <span style="background: rgba(74,222,128,0.2); color: #4ade80; padding: 2px 7px; border-radius: 4px; font-weight: 700; font-size: 10px;">100% UNLOCKED</span>
+        </div>
+        <div class="free-shipping-progress">
+          <div class="free-shipping-fill" style="width: 100%;"></div>
+        </div>
+      </div>
+
+      <!-- Cart Item Container -->
+      <div class="cart-items-container">
+        <div class="cart-drawer-item">
+          <img src="assets/images/bag-front.jpg" alt="ChicSac Tote" class="drawer-item-img" id="drawer-product-img">
+          <div class="drawer-item-details">
+            <div class="drawer-item-header">
+              <h4 class="drawer-item-title">ChicSac Signature Leather Tote</h4>
+              <button type="button" class="drawer-remove-item" id="drawer-remove-item-btn" title="Remove">&times;</button>
+            </div>
+            <div class="drawer-item-color">Color: <strong id="drawer-product-color">Cognac Tan</strong></div>
+            <div class="drawer-item-price-row">
+              <div>
+                <span class="drawer-price" id="drawer-item-price">$40.00</span>
+                <span class="drawer-original-price">$89.00</span>
+              </div>
+              <div class="drawer-qty-stepper">
+                <button type="button" class="drawer-qty-btn" id="drawer-minus-btn">&minus;</button>
+                <span class="drawer-qty-val" id="drawer-qty-val">1</span>
+                <button type="button" class="drawer-qty-btn" id="drawer-plus-btn">&plus;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Promo Code Box -->
+      <div class="cart-promo-box">
+        <input type="text" class="promo-input" id="drawer-promo-input" placeholder="Promo code (e.g. CHIC10)">
+        <button type="button" class="promo-apply-btn" id="drawer-promo-apply-btn">Apply</button>
+      </div>
+      <div id="drawer-promo-msg" style="display: none; padding: 0 24px 8px; font-size: 11.5px; color: #4ade80;"></div>
+
+      <!-- Drawer Footer & Checkout -->
+      <div class="cart-drawer-footer">
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <span id="drawer-subtotal-val">$40.00</span>
+        </div>
+        <div class="cart-summary-row">
+          <span>Worldwide Shipping</span>
+          <span style="color: #4ade80; font-weight: 600;">FREE</span>
+        </div>
+        <div class="cart-summary-row total-row">
+          <span>Estimated Total</span>
+          <span id="drawer-total-val">$40.00</span>
+        </div>
+        <button type="button" class="drawer-checkout-btn" id="drawer-checkout-btn">
+          <span>CHECKOUT NOW (<span id="drawer-btn-price">$40.00</span>)</span>
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+        <div class="drawer-trust-seal">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          <span>256-Bit Encrypted &bull; 7-Day Hassle-Free Returns</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       CRAFTSMANSHIP STORY MODAL
+       ========================================== -->
+  <div class="modal-luxury-backdrop" id="craftsmanship-modal-backdrop">
+    <div class="craft-modal-card">
+      <button class="modal-close-btn" id="close-craftsmanship-modal" aria-label="Close Craftsmanship">&times;</button>
+      <div style="text-align: center; margin-bottom: 16px;">
+        <span class="views-eyebrow">THE CHICSAC HERITAGE</span>
+        <h3 style="font-family: var(--font-serif); font-size: 26px; color: #fff; margin-top: 4px;">Artisan Craftsmanship</h3>
+        <p style="font-size: 12.5px; color: var(--text-muted); max-width: 440px; margin: 6px auto 0;">
+          Every ChicSac tote is handcrafted by seasoned master artisans using full-grain leather chosen for its supple feel and resilience.
+        </p>
+      </div>
+
+      <div class="craft-feature-grid">
+        <div class="craft-feature-item">
+          <h4>100% Genuine Leather</h4>
+          <p>Carefully selected full-grain hides develop a richer, unique patina with each year of wear.</p>
+        </div>
+        <div class="craft-feature-item">
+          <h4>Reinforced X-Stitching</h4>
+          <p>Handles and load-bearing joints are hand-stitched with waxed bonded nylon thread for a lifetime of use.</p>
+        </div>
+        <div class="craft-feature-item">
+          <h4>Antique Brass Hardware</h4>
+          <p>Custom-cast zippers and hardware resist tarnishing and glide effortlessly with every use.</p>
+        </div>
+        <div class="craft-feature-item">
+          <h4>Structured Base</h4>
+          <p>Solid dual-layer bottom construction keeps your tote standing upright wherever you place it.</p>
+        </div>
+      </div>
+
+      <button type="button" class="order-btn-primary" style="width: 100%; max-width: none;" id="btn-craftsmanship-shop">
+        SHOP THE SIGNATURE TOTE ($40)
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MOBILE NAVIGATION DRAWER
+       ========================================== -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+    <div class="mobile-nav-panel">
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <div class="brand-text-group">
+          <span class="brand-name">ChicSac</span>
+          <span class="brand-tagline">TIMELESS ELEGANCE</span>
+        </div>
+        <button type="button" class="cart-drawer-close" id="close-mobile-nav-btn">&times;</button>
+      </div>
+
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link active">Home</a>
+        <a href="#product-showcase" class="mobile-nav-link">Collection ($40)</a>
+        <button type="button" class="mobile-nav-link" id="mobile-craft-link" style="background: none; border: none; text-align: left; padding: 0; width: 100%; font-family: inherit;">Craftsmanship</button>
+        <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+      </div>
+
+      <div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px;">
+        <button type="button" class="order-btn-primary" id="mobile-drawer-order-btn" style="width: 100%; max-width: none;">
+          ORDER NOW &bull; $40
+        </button>
+        <div style="font-size: 11px; color: var(--text-muted); text-align: center;">
+          Free Worldwide Shipping &bull; 7-Day Guarantee
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
