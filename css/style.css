@@ -280,9 +280,60 @@ img {
 /* Mobile Hero (< 900px) */
 .hero-mobile-block {
   display: none;
-  background: var(--bg-dark-surface);
+  background: linear-gradient(180deg, #1a140f 0%, #0f0b08 100%);
   color: #fff;
-  padding: 24px 20px 40px;
+  padding: 0 0 36px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.mobile-hero-img-wrap {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #1a140f;
+}
+
+.mobile-hero-bag-img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+  padding: 30px 20px 10px;
+}
+
+/* Contact Mobile Hero Image */
+.contact-mobile-hero-img-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 0 0 20px 20px;
+  max-height: 280px;
+}
+
+.contact-mobile-hero-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-mobile-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 10, 6, 0.3) 0%, rgba(15, 10, 6, 0.85) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 24px 20px;
+  text-align: center;
 }
 
 .mobile-top-bar {
@@ -355,6 +406,7 @@ img {
 
 .mobile-hero-content {
   text-align: center;
+  padding: 20px 20px 0;
 }
 
 .hero-badge-tag {
@@ -2342,13 +2394,18 @@ img {
 /* Mobile Contact Fallback */
 .contact-mobile-wrapper {
   display: none;
-  background: var(--bg-dark);
+  background: linear-gradient(180deg, #16110d 0%, #0f0b08 100%);
   color: #fff;
-  padding: 24px 20px 40px;
+  padding: 0 0 32px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .contact-mobile-intro {
   text-align: center;
+  padding: 16px 20px;
   margin-bottom: 24px;
 }
 
@@ -2357,6 +2414,7 @@ img {
   color: var(--text-dark);
   border-radius: var(--radius-lg);
   padding: 24px;
+  margin: 0 16px;
   box-shadow: var(--shadow-lg);
 }
 
@@ -3728,10 +3786,10 @@ img {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .navbar-inner-container {
-    padding: 8px 10px 6px;
-    gap: 6px 6px;
+    padding: 8px 12px 4px;
+    gap: 6px 8px;
   }
 
   .nav-left-brand-group {
@@ -3754,18 +3812,22 @@ img {
   }
 
   .nav-brand-logo-svg {
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
   }
 
   .nav-actions-group {
     gap: 5px;
   }
 
+  /* Hide currency text, keep only icon */
+  .currency-toggle-btn #active-currency-text {
+    display: none;
+  }
+
   .currency-toggle-btn {
-    padding: 5px 8px;
-    font-size: 10px;
-    gap: 3px;
+    padding: 6px 8px;
+    gap: 0;
   }
 
   .currency-toggle-btn svg:last-child {
@@ -3773,8 +3835,8 @@ img {
   }
 
   .nav-icon-btn {
-    width: 31px;
-    height: 31px;
+    width: 32px;
+    height: 32px;
   }
 
   .nav-icon-btn svg {
@@ -3784,50 +3846,128 @@ img {
 
   .nav-cta-pill-btn {
     display: inline-flex !important;
-    padding: 6px 10px;
+    padding: 6px 12px;
     font-size: 9.5px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
   }
 
   .nav-menu-desktop {
     gap: 4px;
-    padding: 6px 2px 2px;
-    justify-content: space-around;
+    padding: 6px 4px 4px;
+    justify-content: center;
   }
 
   .nav-tab-icon-item {
-    padding: 5px 9px;
+    padding: 6px 10px;
     font-size: 9.5px;
-    gap: 4px;
+    gap: 5px;
+    border-radius: 16px;
   }
 
   .nav-tab-icon-item .tab-icon-svg {
     width: 12px;
     height: 12px;
   }
+
+  .tab-icon-label {
+    font-size: 9px;
+  }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 480px) {
   .navbar-inner-container {
-    padding: 6px 6px 4px;
+    padding: 6px 8px 2px;
+    gap: 4px 6px;
+  }
+
+  .nav-left-brand-group {
+    gap: 6px;
+  }
+
+  .nav-hamburger-btn {
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    gap: 4px;
+  }
+
+  .nav-brand-title {
+    font-size: 16px;
   }
 
   .nav-brand-subtitle {
     display: none;
   }
 
-  .nav-cta-pill-btn {
-    padding: 5px 7px;
+  .nav-brand-logo-svg {
+    width: 22px;
+    height: 22px;
   }
 
-  .nav-cta-pill-btn span {
+  .nav-actions-group {
+    gap: 4px;
+  }
+
+  /* Hide search and account on very small screens */
+  #nav-search-btn,
+  #nav-account-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .currency-selector-wrap {
+    display: none;
+  }
+
+  .nav-cta-pill-btn {
+    padding: 5px 10px;
     font-size: 9px;
+    letter-spacing: 0.04em;
+  }
+
+  .nav-menu-desktop {
+    gap: 3px;
+    padding: 5px 2px 3px;
+    justify-content: space-around;
+  }
+
+  .nav-tab-icon-item {
+    padding: 5px 8px;
+    font-size: 9px;
+    gap: 4px;
+    border-radius: 14px;
+  }
+
+  .nav-tab-icon-item .tab-icon-svg {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav-brand-title {
+    font-size: 15px;
+  }
+
+  .nav-brand-logo-svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .nav-cta-pill-btn {
+    padding: 4px 8px;
+    font-size: 8.5px;
   }
 
   .nav-tab-icon-item {
     padding: 4px 6px;
-    font-size: 9px;
+    font-size: 8.5px;
     gap: 3px;
+  }
+
+  .nav-tab-icon-item .tab-icon-svg {
+    width: 10px;
+    height: 10px;
   }
 }
 
