@@ -137,28 +137,6 @@
 
     <!-- Responsive Fallback for Mobile / Tablet (< 900px) -->
     <div class="hero-mobile-block">
-      <!-- Mobile Top Bar -->
-      <div class="mobile-top-bar">
-        <div class="brand-logo-wrap">
-          <svg class="logo-icon-svg" viewBox="0 0 40 40">
-            <path d="M12 16 L8 34 C8 35.5 9 36.5 10.5 36.5 L29.5 36.5 C31 36.5 32 35.5 32 34 L28 16 Z" stroke-width="2" stroke-linejoin="round" />
-            <path d="M15 16 C15 7, 25 7, 25 16" stroke-width="2" stroke-linecap="round" />
-          </svg>
-          <div class="brand-text-group">
-            <span class="brand-name">ChicSac</span>
-            <span class="brand-tagline">TIMELESS ELEGANCE</span>
-          </div>
-        </div>
-        <button class="mobile-cart-btn" id="mobile-cart-trigger" aria-label="Cart">
-          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2">
-            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <path d="M16 10a4 4 0 0 1-8 0"></path>
-          </svg>
-          <span class="mobile-cart-badge" id="mobile-cart-badge">0</span>
-        </button>
-      </div>
-
       <div class="mobile-hero-content">
         <span class="hero-badge-tag">PREMIUM LEATHER BAGS</span>
         <h1 class="hero-main-title">More Than a Bag<br>It's a <span>Lifestyle</span></h1>
@@ -381,37 +359,94 @@
              COLUMN 2: PRODUCT DETAILS & FEATURES
              ============================================== -->
         <div class="details-column">
+          <!-- Eyebrow with gold accent line -->
+          <div class="product-eyebrow-wrap">
+            <span class="product-eyebrow-text">PREMIUM LEATHER BAGS</span>
+            <span class="product-eyebrow-line"></span>
+          </div>
+
+          <!-- Main Product Title & Subtitle -->
           <h1 class="product-title">ChicSac Signature Leather Tote</h1>
           <p class="product-subtitle">Timeless design. Everyday elegance.</p>
+
+          <!-- Social Proof / Rating Stars -->
+          <div class="product-rating-row">
+            <div class="rating-stars" aria-label="5 out of 5 stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <span class="rating-score">4.9/5.0</span>
+            <span class="rating-reviews-count">(340+ Verified Reviews)</span>
+            <span class="rating-badge-verified">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+              <span>100% Authentic</span>
+            </span>
+          </div>
           
           <p class="product-desc">
             Crafted from premium <strong>genuine leather</strong>, this versatile tote combines style, functionality and durability. Perfect for work, travel or everyday use — a <strong>must-have</strong> for the modern woman.
           </p>
 
+          <!-- Color Finish Swatches -->
+          <div class="product-color-selector">
+            <span class="color-select-label">Select Leather Finish: <strong id="active-color-name">Cognac Tan</strong></span>
+            <div class="color-options-wrap">
+              <button type="button" class="color-swatch-btn active" data-color="Cognac Tan" data-img-index="0" aria-label="Select Cognac Tan">
+                <span class="swatch-circle cognac"></span>
+                <span>Cognac Tan</span>
+              </button>
+              <button type="button" class="color-swatch-btn" data-color="Vintage Brown" data-img-index="2" aria-label="Select Vintage Brown">
+                <span class="swatch-circle vintage"></span>
+                <span>Vintage Brown</span>
+              </button>
+            </div>
+          </div>
+
           <!-- Price Row -->
           <div class="price-row-box">
-            <span class="price-main" id="display-price">$40</span>
+            <span class="price-main" id="display-price">$40.00</span>
             <span class="price-original">$89</span>
             <span class="discount-pill">55% OFF</span>
+            <span class="stock-urgency-tag">
+              <span class="pulse-green-dot"></span> In Stock &bull; Only 8 Left
+            </span>
           </div>
 
           <!-- Order CTA Button -->
-          <button class="order-btn-primary" id="open-order-modal-btn">
-            <svg viewBox="0 0 24 24">
+          <button class="order-btn-primary" id="open-order-modal-btn" aria-label="Order ChicSac Signature Leather Tote for $40">
+            <svg class="order-btn-bag-icon" viewBox="0 0 24 24">
               <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
               <line x1="3" y1="6" x2="21" y2="6"></line>
               <path d="M16 10a4 4 0 0 1-8 0"></path>
             </svg>
             <span>ORDER NOW</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" style="width: 14px; margin-left: 2px;">
+            <svg class="order-btn-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </button>
 
-          <div class="order-reassurance-row">
-            <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            <span>In Stock &bull; 100% Genuine Handcrafted Leather &bull; Free Global Shipping</span>
+          <!-- Reassurance Grid (2 side-by-side badges with icons as in reference image) -->
+          <div class="product-reassurance-grid">
+            <div class="reassurance-pill-item">
+              <svg class="reassurance-svg" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>In Stock - 100% Genuine Handcrafted Leather</span>
+            </div>
+            <div class="reassurance-pill-item">
+              <svg class="reassurance-svg" viewBox="0 0 24 24">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+              <span>Free Global Shipping</span>
+            </div>
+          </div>
+
+          <!-- Bottom Right Cursive Script (Exactly as in reference image) -->
+          <div class="product-card-signature">
+            <span>More than a bag — it's a lifestyle.</span>
           </div>
         </div>
 

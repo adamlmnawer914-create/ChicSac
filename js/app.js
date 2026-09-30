@@ -579,6 +579,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Color Swatches Interactivity
+  const colorSwatchBtns = document.querySelectorAll('.color-swatch-btn');
+  const activeColorName = document.getElementById('active-color-name');
+  colorSwatchBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      colorSwatchBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const colorName = btn.dataset.color;
+      const imgIdx = parseInt(btn.dataset.imgIndex, 10);
+      if (activeColorName && colorName) {
+        activeColorName.textContent = colorName;
+      }
+      if (!isNaN(imgIdx)) {
+        setGalleryImage(imgIdx);
+      }
+    });
+  });
+
   // ==========================================
   // BOTTOM 6 DETAILED VIEWS STRIP (RIGHT TO LEFT)
   // ==========================================
