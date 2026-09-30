@@ -52,14 +52,20 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden !important;
+  max-width: 100vw;
+  width: 100%;
 }
 
-body {
+body, body.contact-page-body {
   font-family: var(--font-sans);
   background-color: var(--bg-cream);
   color: var(--text-dark);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -405,13 +411,19 @@ img {
   background: #fbf7f0;
   border-top: 1px solid rgba(214, 188, 153, 0.45);
   border-bottom: 1px solid rgba(214, 188, 153, 0.45);
-  padding: 18px 24px;
+  padding: 18px 20px;
   margin-bottom: 40px;
   box-shadow: 0 4px 16px rgba(50, 35, 20, 0.03);
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .trust-bar-grid {
   max-width: 1420px;
+  width: 100%;
+  box-sizing: border-box;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -422,8 +434,10 @@ img {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 8px 24px;
+  padding: 8px 18px;
   position: relative;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .trust-col-item:not(:last-child)::after {
@@ -1859,6 +1873,10 @@ img {
   
   .hero-mobile-block {
     display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 }
 
@@ -1868,13 +1886,20 @@ img {
   }
 
   .showcase-box {
-    padding: 20px 16px;
+    padding: 20px 14px;
     border-radius: 14px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .gallery-column {
     flex-direction: column-reverse;
     gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .thumbnail-strip {
@@ -1885,6 +1910,7 @@ img {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     padding: 4px 0;
+    box-sizing: border-box;
   }
 
   .thumb-item {
@@ -1896,16 +1922,25 @@ img {
 
   .main-img-display-frame {
     width: 100%;
+    max-width: 100%;
     height: clamp(280px, 75vw, 380px);
     border-radius: 10px;
+    box-sizing: border-box;
   }
 
   .gallery-dots-bar {
     display: flex;
   }
 
+  .details-column {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
   .product-title {
     font-size: 26px;
+    word-break: break-word;
   }
 
   .product-subtitle {
@@ -1921,12 +1956,15 @@ img {
     max-width: 100%;
     padding: 16px 20px;
     font-size: 14px;
+    box-sizing: border-box;
   }
 
   .product-reassurance-grid {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .product-card-signature {
@@ -1935,61 +1973,114 @@ img {
   }
 
   .detailed-views-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .detail-view-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .trust-bar-horizontal {
+    padding: 16px 12px !important;
+    margin-bottom: 28px !important;
   }
 
   .trust-bar-horizontal .trust-bar-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 14px 10px !important;
-    padding: 16px 12px !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px 8px !important;
+    padding: 8px 4px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .trust-col-item {
-    padding: 8px 6px;
+    padding: 8px 6px !important;
+    gap: 10px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+  }
+
+  .trust-col-item:not(:last-child)::after {
+    display: none !important;
+  }
+
+  .trust-col-icon {
+    width: 38px !important;
+    height: 38px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .trust-col-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .trust-col-title {
+    font-size: 14px !important;
+    line-height: 1.2 !important;
+  }
+
+  .trust-col-desc {
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .trust-bar-horizontal .trust-bar-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .trust-col-item {
+    padding: 12px 14px !important;
+    background: rgba(255, 255, 255, 0.7) !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(214, 188, 153, 0.35) !important;
   }
 }
 
 @media (max-width: 480px) {
   .section-container {
-    padding: 0 12px;
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .showcase-box {
-    padding: 16px 12px;
+    padding: 14px 10px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .thumb-item {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
   }
 
   .product-title {
-    font-size: 23px;
+    font-size: 22px;
   }
 
   .price-main {
-    font-size: 28px;
+    font-size: 27px;
   }
 
   .discount-pill {
-    font-size: 10.5px;
+    font-size: 10px;
     padding: 3px 8px;
   }
 
   .color-swatch-btn {
-    padding: 5px 10px;
-    font-size: 11px;
-  }
-
-  .nav-tab-icon-item {
-    padding: 5px 8px;
-    font-size: 10px;
-    gap: 4px;
-  }
-
-  .tab-icon-label {
-    font-size: 9px;
+    padding: 5px 9px;
+    font-size: 10.5px;
   }
 
   .brand-name {
@@ -2367,6 +2458,8 @@ img {
   font-weight: 600;
   color: #1c1611;
   transition: all var(--transition-fast);
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .channel-action-pill:hover {
@@ -2381,6 +2474,13 @@ img {
   stroke: #1c1611;
   stroke-width: 1.8;
   fill: none;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .contact-channel-card:not(:last-child)::after {
+    display: none !important;
+  }
 }
 
 @media (max-width: 900px) {
@@ -2389,22 +2489,55 @@ img {
   }
   .contact-mobile-wrapper {
     display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .contact-channels-section {
+    padding: 32px 16px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
   .contact-channels-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+    box-sizing: border-box;
   }
-  .contact-channel-card:not(:last-child)::after {
-    display: none;
+  .contact-channel-card {
+    padding: 14px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+  }
+  .channel-action-pill {
+    padding: 7px 12px;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .contact-channels-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
-  .detailed-views-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+  .contact-channel-card {
+    padding: 18px 16px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid rgba(214, 188, 153, 0.35);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+  .channel-action-pill {
+    padding: 8px 16px;
+    font-size: 12px;
   }
 }
 
@@ -2427,12 +2560,21 @@ img {
 
 .navbar-inner-container {
   max-width: 1440px;
+  width: 100%;
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 12px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+}
+
+.nav-left-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
 }
 
 /* Brand Logo */
@@ -3466,18 +3608,226 @@ img {
   color: var(--primary-gold-light);
 }
 
+/* ========================================================
+   RESPONSIVE LUXURY TOP NAVBAR (MOBILE & TABLET)
+   Keeps HOME, COLLECTION, CONTACT US and ORDER NOW visible at all times!
+   ======================================================== */
 @media (max-width: 1024px) {
-  .nav-menu-desktop {
-    display: none;
+  .luxury-top-navbar {
+    padding: 0;
   }
+
+  .navbar-inner-container {
+    flex-wrap: wrap;
+    padding: 10px 16px 8px;
+    gap: 8px 12px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-left-brand-group {
+    order: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
   .nav-hamburger-btn {
     display: flex;
+    width: 34px;
+    height: 34px;
+    padding: 7px;
+  }
+
+  .nav-brand-title {
+    font-size: 20px;
+  }
+
+  .nav-brand-subtitle {
+    font-size: 7.5px;
+    letter-spacing: 0.22em;
+  }
+
+  .nav-brand-logo-svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nav-actions-group {
+    order: 2;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+  }
+
+  .currency-toggle-btn {
+    padding: 6px 10px;
+    font-size: 11px;
+    gap: 4px;
+  }
+
+  .currency-toggle-btn svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .nav-icon-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .nav-icon-btn svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  /* ORDER NOW CTA: ALWAYS VISIBLE ON MOBILE */
+  .nav-cta-pill-btn {
+    display: inline-flex !important;
+    padding: 7px 13px;
+    font-size: 10.5px;
+    gap: 5px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    border-radius: var(--radius-full);
+  }
+
+  /* Persistent Top Bar Icon Tabs (Tier 2 Strip - HOME, COLLECTION, CONTACT US) */
+  .nav-menu-desktop {
+    order: 3;
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 4px 4px;
+    margin-top: 2px;
+    border-top: 1px solid rgba(223, 183, 117, 0.16);
+    list-style: none;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-tab-icon-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 18px;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-tab-icon-item .tab-icon-svg {
+    width: 13px;
+    height: 13px;
   }
 }
 
-@media (max-width: 768px) {
-  .nav-cta-pill-btn {
+@media (max-width: 640px) {
+  .navbar-inner-container {
+    padding: 8px 10px 6px;
+    gap: 6px 6px;
+  }
+
+  .nav-left-brand-group {
+    gap: 8px;
+  }
+
+  .nav-hamburger-btn {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+  }
+
+  .nav-brand-title {
+    font-size: 18px;
+  }
+
+  .nav-brand-subtitle {
+    font-size: 7px;
+    letter-spacing: 0.18em;
+  }
+
+  .nav-brand-logo-svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .nav-actions-group {
+    gap: 5px;
+  }
+
+  .currency-toggle-btn {
+    padding: 5px 8px;
+    font-size: 10px;
+    gap: 3px;
+  }
+
+  .currency-toggle-btn svg:last-child {
     display: none;
+  }
+
+  .nav-icon-btn {
+    width: 31px;
+    height: 31px;
+  }
+
+  .nav-icon-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .nav-cta-pill-btn {
+    display: inline-flex !important;
+    padding: 6px 10px;
+    font-size: 9.5px;
+    letter-spacing: 0.05em;
+  }
+
+  .nav-menu-desktop {
+    gap: 4px;
+    padding: 6px 2px 2px;
+    justify-content: space-around;
+  }
+
+  .nav-tab-icon-item {
+    padding: 5px 9px;
+    font-size: 9.5px;
+    gap: 4px;
+  }
+
+  .nav-tab-icon-item .tab-icon-svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .navbar-inner-container {
+    padding: 6px 6px 4px;
+  }
+
+  .nav-brand-subtitle {
+    display: none;
+  }
+
+  .nav-cta-pill-btn {
+    padding: 5px 7px;
+  }
+
+  .nav-cta-pill-btn span {
+    font-size: 9px;
+  }
+
+  .nav-tab-icon-item {
+    padding: 4px 6px;
+    font-size: 9px;
+    gap: 3px;
   }
 }
 
