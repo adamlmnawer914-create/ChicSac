@@ -296,15 +296,23 @@ img {
   background: #1a140f;
 }
 
-.mobile-hero-bag-img {
+.mobile-hero-banner-img {
   width: 100%;
-  max-width: 320px;
   height: auto;
   display: block;
-  margin: 0 auto;
-  object-fit: contain;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
-  padding: 30px 20px 10px;
+  object-fit: cover;
+}
+
+.mobile-hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(0deg, rgba(15, 10, 6, 0.7) 0%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
 }
 
 /* Contact Mobile Hero Image */
