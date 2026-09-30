@@ -3882,44 +3882,33 @@ img {
     border-radius: var(--radius-full);
   }
 
-  /* Persistent Top Bar Icon Tabs (Tier 2 Strip - HOME, COLLECTION, CONTACT US) */
+  /* On screens <= 1024px / Mobile: Hide top icon tabs strip as requested (accessible via hamburger drawer) */
   .nav-menu-desktop {
-    order: 3;
-    width: 100%;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    padding: 8px 4px 4px;
-    margin-top: 2px;
-    border-top: 1px solid rgba(223, 183, 117, 0.16);
-    list-style: none;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    display: none !important;
+  }
+}
+
+/* Luxury spacing between floating top navbar and background banner on mobile & tablet */
+@media (max-width: 900px) {
+  .hero-top-wrapper,
+  .contact-hero-section {
+    margin-top: 18px;
   }
 
-  .nav-tab-icon-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 12px;
-    border-radius: 18px;
-    font-size: 10.5px;
-    letter-spacing: 0.08em;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-
-  .nav-tab-icon-item .tab-icon-svg {
-    width: 13px;
-    height: 13px;
+  .hero-mobile-block,
+  .contact-mobile-wrapper {
+    border-top: 1px solid rgba(223, 183, 117, 0.22);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
   }
 }
 
 @media (max-width: 768px) {
   .navbar-inner-container {
-    padding: 8px 12px 6px;
-    gap: 6px 8px;
+    padding: 9px 14px;
+    gap: 8px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .nav-left-brand-group {
@@ -3981,47 +3970,23 @@ img {
     white-space: nowrap;
   }
 
-  /* Row 2: Perfectly Centered Luxury Icon Tabs (HOME & CONTACT US) */
   .nav-menu-desktop {
-    gap: 8px;
-    padding: 6px 0 2px;
-    margin-top: 2px;
-    justify-content: center;
-    border-top: 1px solid rgba(223, 183, 117, 0.14);
-    overflow-x: hidden;
+    display: none !important;
   }
 
-  .nav-tab-icon-item {
-    padding: 5px 14px;
-    font-size: 10px;
-    font-weight: 600;
-    gap: 6px;
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(223, 183, 117, 0.18);
-  }
-
-  .nav-tab-icon-item.active {
-    background: rgba(223, 183, 117, 0.16);
-    border-color: rgba(223, 183, 117, 0.6);
-    color: #dfb775;
-  }
-
-  .nav-tab-icon-item .tab-icon-svg {
-    width: 12px;
-    height: 12px;
-  }
-
-  .tab-icon-label {
-    font-size: 9.5px;
-    letter-spacing: 0.06em;
+  .hero-top-wrapper,
+  .contact-hero-section {
+    margin-top: 16px;
   }
 }
 
 @media (max-width: 480px) {
   .navbar-inner-container {
-    padding: 6px 8px 2px;
-    gap: 4px 6px;
+    padding: 7px 10px;
+    gap: 6px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .nav-left-brand-group {
@@ -4069,22 +4034,13 @@ img {
     letter-spacing: 0.04em;
   }
 
+  .hero-top-wrapper,
+  .contact-hero-section {
+    margin-top: 14px;
+  }
+
   .nav-menu-desktop {
-    gap: 3px;
-    padding: 5px 2px 3px;
-    justify-content: space-around;
-  }
-
-  .nav-tab-icon-item {
-    padding: 5px 8px;
-    font-size: 9px;
-    gap: 4px;
-    border-radius: 14px;
-  }
-
-  .nav-tab-icon-item .tab-icon-svg {
-    width: 11px;
-    height: 11px;
+    display: none !important;
   }
 }
 
