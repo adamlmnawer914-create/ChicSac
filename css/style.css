@@ -2229,6 +2229,70 @@ img {
 }
 
 /* ========================================================
+   DESKTOP CONTACT INTRO TEXT (LEFT SIDE - FROM REFERENCE)
+   ======================================================== */
+.desktop-contact-intro {
+  position: absolute;
+  left: 6%;
+  top: 22%;
+  width: 26.5%;
+  z-index: 10;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-badge-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.contact-eyebrow {
+  font-family: var(--font-sans);
+  font-size: clamp(9px, 0.72vw, 11px);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #dfb775;
+}
+
+.contact-eyebrow-line {
+  display: inline-block;
+  width: 36px;
+  height: 1px;
+  background: #dfb775;
+}
+
+.contact-main-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(30px, 3.4vw, 54px);
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.05;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
+}
+
+.contact-main-heading span {
+  font-family: var(--font-serif);
+  color: #dfb775;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.contact-sub-text {
+  font-family: var(--font-sans);
+  font-size: clamp(11.5px, 0.88vw, 14.5px);
+  color: #eae1d5;
+  line-height: 1.65;
+  margin: 0;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* ========================================================
    CRISP DESKTOP LUXURY CONTACT FORM CARD
    ======================================================== */
 .desktop-contact-card {
@@ -2454,8 +2518,25 @@ img {
 
 .contact-mobile-intro {
   text-align: center;
-  padding: 16px 20px;
-  margin-bottom: 24px;
+  padding: 16px 20px 20px;
+}
+
+.contact-mobile-intro .contact-sub-text {
+  font-size: 13px;
+  color: #d8cec0;
+  line-height: 1.6;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.contact-mobile-hero-overlay .contact-badge-wrap {
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.contact-mobile-hero-overlay .contact-main-heading {
+  font-size: 32px;
+  margin-bottom: 0;
 }
 
 .contact-mobile-card {
