@@ -280,9 +280,9 @@ img {
 /* Mobile Hero (< 900px) */
 .hero-mobile-block {
   display: none;
-  background: linear-gradient(180deg, #1a140f 0%, #0f0b08 100%);
+  background: #110d09;
   color: #fff;
-  padding: 0 0 36px;
+  padding: 0;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -293,26 +293,66 @@ img {
   width: 100%;
   position: relative;
   overflow: hidden;
-  background: #1a140f;
+  background: #110d09;
 }
 
 .mobile-hero-banner-img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
 }
 
-.mobile-hero-overlay {
+.mobile-neon-cta-btn {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px;
-  background: linear-gradient(0deg, rgba(15, 10, 6, 0.7) 0%, transparent 100%);
+  left: 8.2%;
+  top: 76.38%;
+  width: 14%;
+  height: 10.08%;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(4px, 1vw, 10px);
+  background: linear-gradient(180deg, #c7904a 0%, #aa7334 100%);
+  border: 1.5px solid rgba(235, 196, 130, 0.95);
+  border-radius: 4px;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Outfit', var(--font-sans), sans-serif;
+  font-size: clamp(8px, 1.6vw, 13px);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  z-index: 15;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 0 4px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 
+    0 4px 14px rgba(0, 0, 0, 0.25),
+    0 0 12px rgba(223, 183, 117, 0.5),
+    inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  animation: subtleLuxuryNeonPulse 3.5s infinite ease-in-out;
+  transition: all 0.25s ease;
+}
+
+.mobile-neon-cta-btn:hover {
+  background: linear-gradient(180deg, #d39b53 0%, #b57c39 100%);
+  color: #ffffff;
+  border-color: #fff0c2;
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.3),
+    0 0 24px rgba(223, 183, 117, 0.8),
+    inset 0 1px 2px rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.mobile-neon-cta-btn .neon-btn-arrow {
+  width: clamp(9px, 1.2vw, 14px);
+  height: clamp(9px, 1.2vw, 14px);
+  stroke: #ffffff;
+  stroke-width: 2.3;
+  fill: none;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
 }
 
 /* Contact Mobile Hero Image */
@@ -327,8 +367,9 @@ img {
 
 .contact-mobile-hero-img {
   width: 100%;
-  height: 280px;
+  height: 240px;
   object-fit: cover;
+  object-position: 70% center;
   display: block;
 }
 
@@ -3796,7 +3837,7 @@ img {
 
 @media (max-width: 768px) {
   .navbar-inner-container {
-    padding: 8px 12px 4px;
+    padding: 8px 12px 6px;
     gap: 6px 8px;
   }
 
@@ -3808,6 +3849,7 @@ img {
     width: 32px;
     height: 32px;
     padding: 6px;
+    flex-shrink: 0;
   }
 
   .nav-brand-title {
@@ -3820,56 +3862,68 @@ img {
   }
 
   .nav-brand-logo-svg {
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
   }
 
   .nav-actions-group {
-    gap: 5px;
+    gap: 6px;
+    align-items: center;
   }
 
-  /* Hide currency text, keep only icon */
-  .currency-toggle-btn #active-currency-text {
-    display: none;
+  /* Keep utility actions clean: hide account & currency text on mobile top row (accessible via drawer menu) */
+  #nav-account-btn {
+    display: none !important;
   }
 
-  .currency-toggle-btn {
-    padding: 6px 8px;
-    gap: 0;
-  }
-
-  .currency-toggle-btn svg:last-child {
-    display: none;
+  .currency-selector-wrap {
+    display: none !important;
   }
 
   .nav-icon-btn {
     width: 32px;
     height: 32px;
+    padding: 6px;
   }
 
   .nav-icon-btn svg {
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
   }
 
   .nav-cta-pill-btn {
     display: inline-flex !important;
-    padding: 6px 12px;
-    font-size: 9.5px;
+    padding: 6px 13px;
+    font-size: 10px;
+    font-weight: 700;
     letter-spacing: 0.06em;
+    white-space: nowrap;
   }
 
+  /* Row 2: Perfectly Centered Luxury Icon Tabs (HOME & CONTACT US) */
   .nav-menu-desktop {
-    gap: 4px;
-    padding: 6px 4px 4px;
+    gap: 8px;
+    padding: 6px 0 2px;
+    margin-top: 2px;
     justify-content: center;
+    border-top: 1px solid rgba(223, 183, 117, 0.14);
+    overflow-x: hidden;
   }
 
   .nav-tab-icon-item {
-    padding: 6px 10px;
-    font-size: 9.5px;
-    gap: 5px;
-    border-radius: 16px;
+    padding: 5px 14px;
+    font-size: 10px;
+    font-weight: 600;
+    gap: 6px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(223, 183, 117, 0.18);
+  }
+
+  .nav-tab-icon-item.active {
+    background: rgba(223, 183, 117, 0.16);
+    border-color: rgba(223, 183, 117, 0.6);
+    color: #dfb775;
   }
 
   .nav-tab-icon-item .tab-icon-svg {
@@ -3878,7 +3932,8 @@ img {
   }
 
   .tab-icon-label {
-    font-size: 9px;
+    font-size: 9.5px;
+    letter-spacing: 0.06em;
   }
 }
 
