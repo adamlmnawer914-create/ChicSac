@@ -416,7 +416,11 @@
       <!-- Order Form View -->
       <div id="order-form-container">
         <div class="modal-header-block">
-          <h3 class="modal-title">Complete Your Order</h3>
+          <div style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; background: rgba(37, 211, 102, 0.12); color: #1e874b; font-size: 11px; font-weight: 700; margin-bottom: 8px;">
+            <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: currentColor;"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41h-.01c-1.43 0-2.83-.37-4.07-1.07l-.29-.17-3.12.82.83-3.04-.19-.3a8.18 8.18 0 0 1-1.25-4.48c0-4.54 3.69-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.49-1.39-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.71 4.31 3.8.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+            DIRECT WHATSAPP ORDER &bull; تأكيد فوري عبر واتساب
+          </div>
+          <h3 class="modal-title">Complete Your Order (معلومات الطلب)</h3>
           <p class="modal-subtitle">Special Introductory Price: $40 with Free Worldwide Delivery</p>
         </div>
 
@@ -433,7 +437,7 @@
         <form id="order-form">
           <!-- Color Selection -->
           <div class="order-form-group">
-            <label class="form-label">Select Color</label>
+            <label class="form-label">Select Color (اختر اللون)</label>
             <div class="color-options-row">
               <button type="button" class="color-option-btn selected" data-color="Cognac Tan" data-img="assets/images/bag-front.jpg">
                 <span class="color-swatch-circle tan"></span>
@@ -448,7 +452,7 @@
 
           <!-- Quantity Selection -->
           <div class="order-form-group">
-            <label class="form-label">Quantity</label>
+            <label class="form-label">Quantity (الكمية)</label>
             <div class="quantity-picker-row">
               <button type="button" class="qty-btn" id="qty-minus">&minus;</button>
               <span class="qty-display" id="qty-value">1</span>
@@ -458,29 +462,35 @@
 
           <!-- Recipient Name -->
           <div class="order-form-group">
-            <label class="form-label" for="customer-name">Full Name</label>
-            <input type="text" id="customer-name" class="form-input-field" placeholder="e.g. Sarah Jenkins" required>
+            <label class="form-label" for="customer-name">Full Name (الاسم الكامل) *</label>
+            <input type="text" id="customer-name" class="form-input-field" placeholder="e.g. Sarah Jenkins / سارة" required>
           </div>
 
           <!-- Recipient Phone / WhatsApp -->
           <div class="order-form-group">
-            <label class="form-label" for="customer-phone">Phone / WhatsApp Number</label>
-            <input type="tel" id="customer-phone" class="form-input-field" placeholder="e.g. +1 (555) 234-5678" required>
+            <label class="form-label" for="customer-phone">Phone / WhatsApp (رقم الهاتف) *</label>
+            <input type="tel" id="customer-phone" class="form-input-field" placeholder="e.g. 06 XX XX XX XX / +212 6XX..." required>
           </div>
 
           <!-- Delivery Address -->
           <div class="order-form-group">
-            <label class="form-label" for="customer-address">Delivery Address &amp; City</label>
-            <input type="text" id="customer-address" class="form-input-field" placeholder="Street, Apartment, City, Postal Code" required>
+            <label class="form-label" for="customer-address">City &amp; Address (المدينة والعنوان بالتفصيل) *</label>
+            <input type="text" id="customer-address" class="form-input-field" placeholder="e.g. Casablanca, Maarif / الدار البيضاء" required>
+          </div>
+
+          <!-- Optional Notes -->
+          <div class="order-form-group">
+            <label class="form-label" for="customer-notes">Order Notes / ملاحظات إضافية (اختياري)</label>
+            <input type="text" id="customer-notes" class="form-input-field" placeholder="Any special delivery instructions...">
           </div>
 
           <!-- Payment Option -->
           <div class="order-form-group">
-            <label class="form-label">Payment Method</label>
+            <label class="form-label">Payment Method (طريقة الدفع)</label>
             <select class="form-select-field" id="payment-method">
-              <option value="cod">Cash on Delivery (Pay when you receive)</option>
-              <option value="card">Credit / Debit Card (100% Encrypted)</option>
-              <option value="applepay">Apple Pay / Google Pay</option>
+              <option value="Cash on Delivery (الدفع عند الاستلام)">Cash on Delivery (الدفع عند الاستلام)</option>
+              <option value="Bank Transfer (تحويل بنكي)">Bank Transfer (تحويل بنكي)</option>
+              <option value="Credit / Debit Card (بطاقة بنكية)">Credit / Debit Card (بطاقة بنكية)</option>
             </select>
           </div>
 
@@ -492,7 +502,7 @@
             </div>
             <div class="cost-row">
               <span>Worldwide Shipping:</span>
-              <span style="color: #2e7d32; font-weight: 600;">FREE</span>
+              <span style="color: #2e7d32; font-weight: 600;">FREE (مجاني)</span>
             </div>
             <div class="cost-row total-row">
               <span>Total Amount:</span>
@@ -502,26 +512,32 @@
 
           <!-- Confirm Button -->
           <button type="submit" class="submit-order-btn" id="submit-order-btn">
-            CONFIRM ORDER ($40.00)
+            <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: currentColor;"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41h-.01c-1.43 0-2.83-.37-4.07-1.07l-.29-.17-3.12.82.83-3.04-.19-.3a8.18 8.18 0 0 1-1.25-4.48c0-4.54 3.69-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.49-1.39-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.71 4.31 3.8.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+            <span id="submit-order-text">CONFIRM &amp; SEND VIA WHATSAPP &bull; $40.00</span>
           </button>
         </form>
       </div>
 
       <!-- Success Pane -->
       <div class="order-success-pane" id="order-success-pane">
-        <div class="order-success-icon">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5"></path></svg>
+        <div class="order-success-icon" style="background: rgba(37, 211, 102, 0.15); color: #25d366;">
+          <svg viewBox="0 0 24 24" fill="none" style="stroke: #25d366; stroke-width: 2.5;"><path d="M20 6L9 17l-5-5"></path></svg>
         </div>
-        <h3 class="modal-title" style="color: #1e874b;">Order Confirmed!</h3>
+        <h3 class="modal-title" style="color: #1e874b;">Order Prepared for WhatsApp!</h3>
         <p style="font-size: 14px; color: #5c4e3f; margin: 8px 0 16px;">
-          Thank you for choosing ChicSac. Your Signature Leather Tote is being prepared with utmost care.
+          Your order has been formatted and directed to our WhatsApp concierge (<strong>+212 676-494855</strong>).
         </p>
         <div style="background: #f7f2ea; padding: 14px; border-radius: 8px; margin-bottom: 20px; font-size: 13px; text-align: left;">
           <div><strong>Order Reference:</strong> <span id="success-order-id">#CS-98421</span></div>
+          <div><strong>WhatsApp Concierge:</strong> +212 676-494855</div>
           <div><strong>Estimated Delivery:</strong> 3 &ndash; 5 Business Days</div>
           <div><strong>Free Shipping:</strong> Included</div>
         </div>
-        <button type="button" class="order-btn-primary" id="btn-done-order" style="width: 100%; max-width: none;">
+        <a id="btn-reopen-whatsapp" href="#" target="_blank" class="order-btn-primary" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; max-width: none; background: #25d366; color: #fff; margin-bottom: 10px; text-decoration: none; border-radius: 8px; font-weight: 700; padding: 14px;">
+          <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor;"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41h-.01c-1.43 0-2.83-.37-4.07-1.07l-.29-.17-3.12.82.83-3.04-.19-.3a8.18 8.18 0 0 1-1.25-4.48c0-4.54 3.69-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.49-1.39-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.71 4.31 3.8.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+          OPEN IN WHATSAPP (فتح في واتساب)
+        </a>
+        <button type="button" class="order-btn-primary" id="btn-done-order" style="width: 100%; max-width: none; background: #16110d; border: 1px solid rgba(223, 183, 117, 0.4); color: #dfb775;">
           CONTINUE BROWSING
         </button>
       </div>

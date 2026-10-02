@@ -88,8 +88,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const summaryTotal = document.getElementById('summary-total');
     if (summaryTotal) summaryTotal.textContent = totalFormatted;
 
-    const submitOrderBtn = document.getElementById('submit-order-btn');
-    if (submitOrderBtn) submitOrderBtn.textContent = `CONFIRM ORDER (${totalFormatted})`;
+    const submitOrderText = document.getElementById('submit-order-text');
+    if (submitOrderText) {
+      submitOrderText.textContent = `CONFIRM & SEND VIA WHATSAPP \u2022 ${totalFormatted}`;
+    } else {
+      const submitOrderBtn = document.getElementById('submit-order-btn');
+      if (submitOrderBtn) submitOrderBtn.textContent = `CONFIRM & SEND VIA WHATSAPP (${totalFormatted})`;
+    }
   }
 
   // Update Cart Badges
@@ -757,19 +762,76 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Handle Order Submit
+  // Handle Order Submit with Direct WhatsApp Forwarding to +212 676-494855
   if (orderForm) {
     orderForm.addEventListener('submit', (e) => {
       e.preventDefault();
+
+      const nameInput = document.getElementById('customer-name');
+      const phoneInput = document.getElementById('customer-phone');
+      const addressInput = document.getElementById('customer-address');
+      const notesInput = document.getElementById('customer-notes');
+      const paymentSelect = document.getElementById('payment-method');
+
+      const customerName = (nameInput ? nameInput.value : '').trim();
+      const customerPhone = (phoneInput ? phoneInput.value : '').trim();
+      const customerAddress = (addressInput ? addressInput.value : '').trim();
+      const customerNotes = (notesInput ? notesInput.value : '').trim();
+      const paymentMethod = paymentSelect ? paymentSelect.value : 'Cash on Delivery (الدفع عند الاستلام)';
+
+      if (!customerName || !customerPhone || !customerAddress) {
+        showToast('يرجى ملء جميع الحقول المطلوبة (Name, Phone, Address)');
+        return;
+      }
+
       const orderId = '#CS-' + Math.floor(10000 + Math.random() * 90000);
+      const totalAmountEl = document.getElementById('summary-total');
+      const totalAmount = totalAmountEl ? totalAmountEl.textContent : '$40.00';
+      const orderDate = new Date().toLocaleDateString('fr-FR') + ' ' + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+      // Compose professional, structured WhatsApp order message
+      let message = `🛍️ *طلب جديد — ChicSac Store*\n`;
+      message += `━━━━━━━━━━━━━━━━━━━━\n`;
+      message += `📌 *رقم الطلب:* ${orderId}\n`;
+      message += `📅 *التاريخ:* ${orderDate}\n\n`;
+      message += `👜 *تفاصيل المنتج:*\n`;
+      message += `• *المنتج:* ChicSac Signature Leather Tote\n`;
+      message += `• *اللون:* ${selectedColorName}\n`;
+      message += `• *الكمية:* ${cartQuantity}\n`;
+      message += `• *المبلغ الإجمالي:* ${totalAmount} (شحن مجاني)\n`;
+      message += `• *طريقة الدفع:* ${paymentMethod}\n\n`;
+      message += `👤 *معلومات الزبون:*\n`;
+      message += `• *الاسم الكامل:* ${customerName}\n`;
+      message += `• *رقم الهاتف / واتساب:* ${customerPhone}\n`;
+      message += `• *العنوان والمدينة:* ${customerAddress}\n`;
+      if (customerNotes) {
+        message += `• *ملاحظات إضافية:* ${customerNotes}\n`;
+      }
+      message += `━━━━━━━━━━━━━━━━━━━━\n`;
+      message += `يرجى تأكيد الطلب وتحديد موعد التوصيل. شكراً لك! ✨`;
+
+      const targetWhatsAppNumber = '212676494855';
+      const whatsappUrl = `https://wa.me/${targetWhatsAppNumber}?text=${encodeURIComponent(message)}`;
+
+      // Update success pane in modal
       const successRef = document.getElementById('success-order-id');
       if (successRef) successRef.textContent = orderId;
+
+      const reopenBtn = document.getElementById('btn-reopen-whatsapp');
+      if (reopenBtn) {
+        reopenBtn.href = whatsappUrl;
+      }
 
       if (orderFormContainer) orderFormContainer.style.display = 'none';
       if (orderSuccessPane) orderSuccessPane.style.display = 'block';
 
       refreshCartBadges();
-      showToast(`Order ${orderId} confirmed successfully!`);
+      showToast(`جاري توجيهك إلى واتساب (+212 676-494855)...`);
+
+      // Open WhatsApp directly
+      setTimeout(() => {
+        window.open(whatsappUrl, '_blank');
+      }, 350);
     });
   }
 
